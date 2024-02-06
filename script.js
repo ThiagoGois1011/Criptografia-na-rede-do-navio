@@ -8,18 +8,15 @@ for (let i = 0; i < arrayLetrasBinarias.length; i++) {
     const parte1 = item.slice(0, item.length / 2);
     const parte2 = item.slice(item.length / 2, item.length);
 
-    const arrayParte1 = parte1.split("");
+    const arrayParte2 = parte2.split("");
 
-    const penultimo = parte1.split("")[parte1.length - 2];
-    const ultimo = parte1.split("")[parte1.length - 1];
+    const penultimo = parte2.split("")[parte2.length - 2];
+    const ultimo = parte2.split("")[parte2.length - 1];
 
-    arrayParte1[parte1.length - 2] = ultimo;
-    arrayParte1[parte1.length - 1] = penultimo;
+    arrayParte2[parte2.length - 2] = ultimo;
+    arrayParte2[parte2.length - 1] = penultimo;
 
-    const novoItem = parte2 + arrayParte1.join("");
-
-    console.log(item);
-    console.log(novoItem);
+    const novoItem = arrayParte2.join("") +  parte1;
 
     arrayLetrasBinariasEditada.push(novoItem);
     
