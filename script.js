@@ -1,8 +1,8 @@
-function binarioParaTexto(ListaBinarios) {
+function BinarioParaTexto(ListaBinarios) {
     return ListaBinarios.map(bloco => String.fromCharCode(parseInt(bloco, 2))).join("");
 }
 
-function chaveDeDecodificacao(mensagem){
+function ChaveDeDecodificacao(mensagem){
     const arrayLetrasBinarias = mensagem.split(" ");
     let arrayLetrasBinariasDecodificado = [];
 
@@ -26,7 +26,7 @@ function chaveDeDecodificacao(mensagem){
     return arrayLetrasBinariasDecodificado;
 }
 
-function exibeNaTela(){
+function ExibeNaTela(){
 
     const elementCriptograda = document.createElement("p");
     const elementDescriptografada = document.createElement("p");
@@ -49,12 +49,12 @@ function exibeNaTela(){
 
 const mensagemCriptografada = "10010110 11110111 01010110 00000001 00010111 00100110 01010111 00000001 00010111 01110110 01010111 00110110 11110111 11010111 01010111 00000011";
 
-const arrayBinarioDecodificado = chaveDeDecodificacao(mensagemCriptografada)
-const texto = binarioParaTexto(arrayBinarioDecodificado);
+const arrayBinarioDecodificado = ChaveDeDecodificacao(mensagemCriptografada)
+const texto = BinarioParaTexto(arrayBinarioDecodificado);
 console.log("Mensagem Criptografada: " + mensagemCriptografada);
 console.log("Mensagem Descriptograda: " + arrayBinarioDecodificado);
 console.log("Mensagem: " + texto);
 
-exibeNaTela();
+ExibeNaTela();
 
 
