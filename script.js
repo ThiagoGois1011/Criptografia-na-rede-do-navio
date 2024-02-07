@@ -36,8 +36,8 @@ function ExibeNaTela(){
     elementCriptograda.innerHTML = "Mensagem Criptografada: " +  mensagemCriptografada;
     elementDescriptografada.innerHTML = "Mensagem Descriptograda: " +  arrayBinarioDecodificado.join(" ");
     elementMensagem.innerHTML = "Mensagem: " + texto;
-    elementAviso.innerHTML = "Resultado Disponível Também no console!!"
-    elementAviso.style = "font-weight: bold; font-size: 1.5em;"
+    elementAviso.innerHTML = "Resultado Disponível Também no console!!";
+    elementAviso.style = "font-weight: bold; font-size: 1.5em;";
     const container = document.getElementById("container");
 
     container.appendChild(elementCriptograda);
